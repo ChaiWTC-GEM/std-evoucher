@@ -38,7 +38,7 @@
       const latestGasUrl = config.gas_url;
 
       if (latestGasUrl) {
-        const targetUrl = latestGasUrl + "?uid=" + profile.userId;
+        const targetUrl = latestGasUrl + "?uid=" + profile.userId + "&dname=" + encodeURIComponent(profile.displayName);
         document.getElementById('status-text').innerText = "กำลังเข้าสู่ระบบ...";
         
         // 🚀 ใช้คำสั่งวาร์ปขั้นสุดยอด ทะลุทะลวงทุกเบราว์เซอร์อัตโนมัติ ไม่ต้องรอกด
